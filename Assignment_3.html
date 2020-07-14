@@ -1,0 +1,56 @@
+<html> 
+  
+<head> 
+    <title> 
+      My Third Javascript Assignment
+    </title> 
+</head> 
+  
+<body> 
+    
+    <button onclick="format1()"> 
+        Get current Date in DD/MM/YYYY Format
+    </button>
+	<button onclick="format2()"> 
+        Get current Date in DD-MM-YYYY Format
+    </button>	
+	<button onclick="format3()"> 
+        Get current Date in MM/DD/YYYY Format
+    </button>
+	<button onclick="format4()"> 
+        Get current Date in MM-DD-YYYY Format
+    </button>
+    <p id="sample"></p> 
+    <script>
+        var today = new Date(); 
+        var dd = today.getDate(); 
+        var mm = today.getMonth() + 1; 
+        var yyyy = today.getFullYear(); 
+        if (dd < 10) { 
+            dd = '0' + dd; 
+        } 
+        if (mm < 10) { 
+            mm = '0' + mm; 
+        } 
+         
+  
+        function format1() { 
+			var today = dd + '/' + mm + '/' + yyyy;
+            document.getElementById("sample").innerHTML = "Expected Date Format:"+today;
+        } 
+		function format2() { 
+			var today = dd + '-' + mm + '-' + yyyy;
+            document.getElementById("sample").innerHTML = "Expected Date Format:"+today;
+        }
+		function format3() { 
+			var today = mm + '/' + dd + '/' + yyyy;
+            document.getElementById("sample").innerHTML = "Expected Date Format:"+today;
+        } 
+		function format4() { 
+			var today = mm + '-' + dd + '-' + yyyy;
+            document.getElementById("sample").innerHTML = "Expected Date Format:"+today;
+        }		
+    </script> 
+</body> 
+  
+</html> 
